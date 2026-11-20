@@ -18,9 +18,13 @@ Boolean Functions
 // gedit mux_demux.v
 module mux2to1 (
     input wire A,   // input line 0
+    
     input wire B,   // input line 1
+    
     input wire S,   // select line
+    
     output wire Y   // output
+    
 );
     assign Y = (~S & A) | (S & B);
 endmodule
