@@ -27,15 +27,21 @@ module mux2to1 (
     
 );
     assign Y = (~S & A) | (S & B);
+    
 endmodule
 
 module demux1to2 (
     input wire D,   // data input
+    
     input wire S,   // select line
+    
     output wire Y0, // output line 0
+    
     output wire Y1  // output line 1
+    
 );
     assign Y0 = (~S) & D;
+    
     assign Y1 = S & D;
 endmodule
 
